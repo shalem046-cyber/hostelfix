@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostelFix - Your Perfect Hostel Stay</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1><i class="fas fa-home"></i> HostelFix</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#hostels">Hostels</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn-login">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Find Your Perfect Hostel</h2>
+            <p>Discover amazing hostels around the world and book your next adventure</p>
+            <button class="btn btn-primary" onclick="document.getElementById('hostels').scrollIntoView({behavior: 'smooth'})">
+                Explore Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box">
+                <input type="text" id="locationInput" placeholder="Enter city or location...">
+                <input type="date" id="checkInDate">
+                <input type="date" id="checkOutDate">
+                <button class="btn btn-primary" onclick="searchHostels()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hostels Listing -->
+    <section id="hostels" class="hostels-section">
+        <div class="container">
+            <h2>Popular Hostels</h2>
+            <div class="hostels-grid" id="hostelsGrid">
+                <!-- Hostels will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About HostelFix</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>HostelFix is your go-to platform for finding and booking hostels worldwide. We connect travelers with affordable, clean, and welcoming accommodations.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Best Prices Guaranteed</li>
+                        <li><i class="fas fa-check"></i> 24/7 Customer Support</li>
+                        <li><i class="fas fa-check"></i> Verified Reviews</li>
+                        <li><i class="fas fa-check"></i> Easy Booking Process</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <form id="contactForm" class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 HostelFix. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Hostel Details -->
+    <div id="hostelModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
