@@ -194,4 +194,4 @@ For support, email us or open an issue on GitHub.
 
 ---
 
-**HostelFix** - Making hostel booking easy and accessible for travelers worldwide! 🌍✈️
+**HostelFix** - Making hostel life peaceful.
